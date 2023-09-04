@@ -1,7 +1,7 @@
 FROM node:16-alpine as build-step
 RUN mkdir -p /app
 WORKDIR /app/Frontend
-COPY ./Frontend/package.json /app
+COPY package*.json /app
 
 RUN npm install
 RUN npm install -g @angular/cli

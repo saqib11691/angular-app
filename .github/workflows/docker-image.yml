@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build -f ./Frontend/Dockerfile . --tag my-image-name:$(date +%s)
+        run: docker build . --tag my-image-name:$(date +%s)
 
       # Add the following steps to set up QEMU, Docker Buildx, login to Docker Hub,
       # set environment variable DATE,  and build and push the image.
@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./Frontend/Dockerfile**
+          file: ./Dockerfile
           push: true
           tags: saqib11691/front-end:${{ env.DATE }}
 
