@@ -1,6 +1,6 @@
 FROM node:16-alpine as build-step
 RUN mkdir -p /app
-WORKDIR /app
+WORKDIR /app/Frontend
 COPY ./Frontend/package.json /app
 
 RUN npm install
