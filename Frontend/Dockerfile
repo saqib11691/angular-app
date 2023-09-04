@@ -3,6 +3,7 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY ./Frontend/package.json /app
 
+RUN install -g @angular/cli
 RUN npm install
 COPY . /app
 RUN npm run build
