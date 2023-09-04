@@ -35,7 +35,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./Frontend/Dockerfile
+          context: ./Frontend
           push: true
           tags: saqib11691/front-end:${{ env.DATE }}
 
